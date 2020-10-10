@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: `https://admiring-mclean-00bdaf.netlify.app/`,
   social: {
     twitter: ``, // Your Twitter account
-    github: `https://github.com/jung-jin-lee`, // Your GitHub account
+    github: `jung-jin-lee`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
