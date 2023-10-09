@@ -25,5 +25,11 @@ export default defineType({
       title: '내용',
       type: 'markdown',
     }),
+    defineField({
+      name: 'isPublic',
+      title: '외부 공개',
+      type: 'boolean',
+      initialValue: true,
+    }),
   ],
 });

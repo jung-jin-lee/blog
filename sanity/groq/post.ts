@@ -2,7 +2,7 @@ import { client } from '../lib/client';
 
 export async function getPosts() {
   return await client.fetch<Post[]>(
-    `*[_type == "post" && defined(slug.current)] | order(_createdAt desc)`,
+    `*[_type == "post" && defined(slug.current) && isPublic] | order(_createdAt desc)`,
     undefined,
     {
       cache: 'no-cache',
@@ -12,7 +12,7 @@ export async function getPosts() {
 
 export async function getPost(slug: string) {
   return await client.fetch<Post>(
-    `*[_type == "post" && slug.current == $slug][0]`,
+    `*[_type == "post" && isPublic && slug.current == $slug][0]`,
     {
       slug,
     },
