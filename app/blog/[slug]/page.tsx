@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import { getPost } from '@/sanity/groq/post';
 import SyntaxHighlighter from '@/components/markdown/SyntaxHighlighter';
 import CopyToClipboard from '@/components/common/CopyToClipboard';
+import './github-markdown-light.css';
 
 async function BlogDetailPage({
   params: { slug },
@@ -21,7 +22,7 @@ async function BlogDetailPage({
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           {post.title}
         </h1>
-        <div>
+        <div className="markdown-body">
           <Markdown
             className="mt-6 text-xl leading-8 whitespace-pre-wrap"
             remarkPlugins={[remarkGfm]}
