@@ -324,6 +324,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 2em;
+  list-style-type: initial;
 }
 
 .markdown-body ol ol,
@@ -740,12 +741,12 @@
 
 .markdown-body .highlight pre,
 .markdown-body pre {
-  padding: 16px;
+  /* padding: 16px; */
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
   color: #1f2328;
-  background-color: #f6f8fa;
+  /* background-color: #f6f8fa; */
   border-radius: 6px;
 }
 

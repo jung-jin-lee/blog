@@ -24,7 +24,7 @@ async function BlogDetailPage({
         </h1>
         <div className="markdown-body">
           <Markdown
-            className="mt-6 text-xl leading-8 whitespace-pre-wrap"
+            className="mt-6 text-xl"
             remarkPlugins={[remarkGfm]}
             components={{
               code(props) {
