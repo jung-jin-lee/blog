@@ -22,10 +22,10 @@ function CopyToClipboard({ text }: { text: string }) {
     >
       <button
         aria-label="복사 버튼"
-        className="p-2 border border-md rounded-md border-black bg-white"
+        className="p-1 border border-md rounded-md border-black bg-white"
       >
-        {!isCopied && <ClipboardIcon height={24} />}
-        {isCopied && <CheckIcon color="green" height={24} />}
+        {!isCopied && <ClipboardIcon height={18} />}
+        {isCopied && <CheckIcon color="green" height={18} />}
       </button>
     </ReactCopyToClipboard>
   );
