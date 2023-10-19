@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 import { formatDate } from '@/lib/date';
 import { getPosts } from '@/sanity/groq/post';
+import Markdown from '@/components/markdown/Markdown';
 
 export default async function Home() {
   const posts = await getPosts();
@@ -26,9 +27,9 @@ export default async function Home() {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="mt-5 whitespace-pre-wrap line-clamp-3 text-sm leading-6 text-gray-600">
-                  {post.description}
-                </p>
+                <div className="mt-5 whitespace-pre-wrap line-clamp-3 text-sm leading-6 text-gray-600">
+                  <Markdown text={post.description} />
+                </div>
               </div>
             </article>
           </Fragment>
